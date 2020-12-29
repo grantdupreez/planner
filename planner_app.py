@@ -15,4 +15,5 @@ colors = {'Not Started': 'rgb(220, 0, 0)',
 
 fig = ff.create_gantt(df, colors=colors, index_col='Resource', show_colorbar=True,
                       group_tasks=True)
-fig.show()
+
+st.write(fig.show())
