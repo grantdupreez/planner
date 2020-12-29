@@ -14,7 +14,7 @@ if uploaded_file is not None:
 #   fig = ff.create_gantt(df, colors=colors, index_col='Status', show_colorbar=True,
 #                      group_tasks=True)
 
-    fig = ff.create_gantt(df, colors='Blues', index_col='Project_ID', show_colorbar=True,
+    fig = ff.create_gantt(df, index_col='Project_ID', show_colorbar=True,
                           bar_width=0.5, showgrid_x=True, showgrid_y=True, group_tasks=True)
  
     fig
