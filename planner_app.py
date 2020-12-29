@@ -10,7 +10,8 @@ dt_string = now.strftime("%Y%m%d%H%M%S")+".csv"
 
 s3_string = ""
 #S3 storage for the plan logging
-st.write('S3 path and log filename: '+s3_string+dt_string)
+
+#ACTION activate this when the log location is known - st.write('S3 path and log filename: '+s3_string+dt_string)
 
 
 st.write("**Upload project plan for a Gantt chart view**")
@@ -21,7 +22,8 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, header=[0], parse_dates=[1])
     st.write(df)
     
-#    st.to_csv(dt_string + '.csv')
+#ACTION
+#    st.to_csv(s3_string+dt_string)
     
     fig = ff.create_gantt(df, index_col='Status', show_colorbar=True,
                          showgrid_x=True, showgrid_y=True)
