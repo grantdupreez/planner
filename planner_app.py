@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.figure_factory as ff
 
-st.write("**Upload project plan for a GANTT chart view**")
+st.write("**Upload project plan for a Gantt chart view**")
 st.write("Use the template csv file")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
