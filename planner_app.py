@@ -6,7 +6,7 @@ import plotly.figure_factory as ff
 from datetime import datetime
 
 now = datetime.now()
-dt_string = now.strftime("%Y%m%d%H%M%S")+"csv"
+dt_string = now.strftime("%Y%m%d%H%M%S")+".csv"
 
 s3_string = ""
 #S3 storage for the plan logging
