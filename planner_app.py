@@ -15,7 +15,7 @@ if uploaded_file is not None:
 #                      group_tasks=True)
 
     fig = ff.create_gantt(df, index_col='Project_ID', show_colorbar=True,
-                          showgrid_x=True, showgrid_y=True)
+                         group_tasks=True, showgrid_x=True, showgrid_y=True)
  
     fig
     
