@@ -1,9 +1,9 @@
-﻿Project_ID,Task,Start,Finish,Resource,Status
-P1,Network,01/08/2020,20/12/2020,Ver,Not Started
-P1,Network,01/12/2020,20/12/2020,Ver,Incomplete
-P2,Ariba,15/09/2020,15/02/2021,OH,Complete
-P2,Ariba,01/10/2020,30/11/2020,OH,Complete
-P3,S4,02/09/2020,30/09/2020,Acc,Complete
-P3,S4,01/10/2020,15/10/2020,Acc,Complete
-P3,S4,16/10/2020,20/12/2020,Acc,Incomplete
-P4,Infra,07/11/2020,10/12/2020,Azure,Not Started
+﻿Project_ID,Task,Start (YYYY-MM-DD),Finish (YYYY-MM-DD),Resource,Status
+P1,Network,2020-08-01,2020-12-20,Ver,Not Started
+P1,Network,2020-12-01,2020-12-20,Ver,Incomplete
+P2,Ariba,2020-09-15,2021-02-15,OH,Complete
+P2,Ariba,2020-10-01,2020-11-30,OH,Complete
+P3,S4,2020-09-02,2020-09-30,Acc,Complete
+P3,S4,2020-10-01,2020-10-15,Acc,Complete
+P3,S4,2020-10-16,2020-12-20,Acc,Incomplete
+P4,Infra,2020-11-07,2020-12-10,Azure,Not Started
