@@ -11,7 +11,7 @@ if uploaded_file is not None:
           'Incomplete': (1, 0.9, 0.16),
           'Complete': 'rgb(0, 255, 100)'}
 
-    fig = ff.create_gantt(df, colors=colors, index_col='Resource', show_colorbar=True,
+    fig = ff.create_gantt(df, colors=colors, index_col='Project_ID', show_colorbar=True,
                       group_tasks=True)
     fig
     
