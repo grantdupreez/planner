@@ -7,12 +7,16 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, header=[0], parse_dates=[0])
     st.write(df)
     
-    colors = {'Not Started': 'rgb(220, 0, 0)',
-          'Incomplete': (1, 0.9, 0.16),
-          'Complete': 'rgb(0, 255, 100)'}
+#    colors = {'Not Started': 'rgb(220, 0, 0)',
+#          'Incomplete': (1, 0.9, 0.16),
+#          'Complete': 'rgb(0, 255, 100)'}
 
-    fig = ff.create_gantt(df, colors=colors, index_col='Status', show_colorbar=True,
-                      group_tasks=True)
+#   fig = ff.create_gantt(df, colors=colors, index_col='Status', show_colorbar=True,
+#                      group_tasks=True)
+
+    fig = ff.create_gantt(df, colors='Blues', index_col='Project_ID', show_colorbar=True,
+                          bar_width=0.5, showgrid_x=True, showgrid_y=True, group_tasks=True)
+ 
     fig
     
     
