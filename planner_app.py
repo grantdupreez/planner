@@ -5,8 +5,8 @@ import plotly.figure_factory as ff
 import plotly.graph_objs as go
 
 # setup
-display(HTML("<style>.container { width:50% !important; } .widget-select > select {background-color: gainsboro;}</style>"))
-init_notebook_mode(connected=True)
+#display(HTML("<style>.container { width:50% !important; } .widget-select > select {background-color: gainsboro;}</style>"))
+#init_notebook_mode(connected=True)
 
 #%qtconsole --style vim
 
