@@ -2,14 +2,15 @@ import streamlit as st
 import pandas as pd
 import plotly.figure_factory as ff
 
-colors = {'Not Started': 'rgb(220, 0, 0)',
-          'Incomplete': (1, 0.9, 0.16),
-          'Complete': 'rgb(0, 255, 100)'}
-
 uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, header=[0], parse_dates=[0])
     st.write(df)
+    
+    colors = {'Not Started': 'rgb(220, 0, 0)',
+          'Incomplete': (1, 0.9, 0.16),
+          'Complete': 'rgb(0, 255, 100)'}
+
     fig = ff.create_gantt(df, colors=colors, index_col='Resource', show_colorbar=True,
                       group_tasks=True)
     fig
