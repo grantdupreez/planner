@@ -41,7 +41,7 @@ if uploaded_file is not None:
                       , x_end="Finish"
                       , y="CR"
                       , hover_name="CR"
-                      , color='Status'
+                      , color='Color'
                       , opacity=.7
     )
     
