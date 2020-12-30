@@ -23,11 +23,11 @@ uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
                      #, header=[0], encoding='latin1')
-    df['Start'] = pd.to_datetime(df['Start'])
-    df['Finish'] = pd.to_datetime(df['Finish'])
+#    df['Start'] = pd.to_datetime(df['Start'])
+#    df['Finish'] = pd.to_datetime(df['Finish'])
 
-#    df['Start'] = df['Start'].astype('datetime64')
-#    df['Finish'] = df['Finish'].astype('datetime64')
+    df['Start'] = df['Start'].astype('datetime64')
+    df['Finish'] = df['Finish'].astype('datetime64')
     
 #    orders = list(df['Process'])
     
