@@ -21,13 +21,13 @@ st.write("Use the template csv file")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-                     #, header=[0], encoding='latin1')
+    df = pd.read_csv(uploaded_file, header=[0], encoding='latin1')
+    
 #    df['Start'] = pd.to_datetime(df['Start'])
 #    df['Finish'] = pd.to_datetime(df['Finish'])
 
-    df['Start'] = df['Start'].astype('datetime64')
-    df['Finish'] = df['Finish'].astype('datetime64')
+#    df['Start'] = df['Start'].astype('datetime64')
+#    df['Finish'] = df['Finish'].astype('datetime64')
     
 #    orders = list(df['Process'])
     
@@ -39,7 +39,7 @@ if uploaded_file is not None:
 #    fig = ff.create_gantt(df, index_col='Status', show_colorbar=True,
 #                         showgrid_x=True, showgrid_y=True)
  
-    Fig = px.timeline(df, x_start="Start", x_end="Finish")
+#    Fig = px.timeline(df, x_start="Start", x_end="Finish")
     # y="Task",
    #     color_discrete_sequence=px.colors.qualitative.Prism, opacity=.7, range_x=None,
   #                range_y=None,
@@ -50,6 +50,6 @@ if uploaded_file is not None:
   #                )
  
  
-    fig
+ #   fig
     
-    go.FigureWidget(fig)
+ #   go.FigureWidget(fig)
