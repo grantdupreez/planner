@@ -54,7 +54,7 @@ if uploaded_file is not None:
         bargap=0.5
         ,bargroupgap=0.1
         ,xaxis_range=[df.Start.min(), df.Finish.max()]
-            showgrid=True
+        ,showgrid=True
         ,rangeslider_visible=True
         ,side ="top"
         ,tickmode = 'array'
