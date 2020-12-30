@@ -39,12 +39,6 @@ if uploaded_file is not None:
 #                         showgrid_x=True, showgrid_y=True)
  
     
-    colors = {'Ariba' : 'rgb(30,144,255)'
-          , 'Ariba - Date TBD' : 'rgb(211,211,211)'
-          , 'S4' : 'rgb(95,158,160)'
-          , 'Network' : 'rgb(0,0,128)'
-          , 'Network - Date TBD' : 'rgb(211,211,210)'}
-    
     fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", hover_name="Task",
                      color_discrete_sequence=px.colors.qualitative.Prism
                   , opacity=.7
@@ -52,11 +46,12 @@ if uploaded_file is not None:
                   , range_y=None
                   , template='plotly_white'
                   , height=1200
-                     , color='Task'
+                     , color='Dimension'
                   , title ="<b>IE 3.0 Gantt Chart 2021</b>"
-                 )
-    
-     fig.update_layout(
+                   , color=colors
+    )
+                 
+    fig.update_layout(
             bargap=0.5
             ,bargroupgap=0.1
             ,xaxis_range=[df.Start.min(), df.Finish.max()]
@@ -89,18 +84,19 @@ if uploaded_file is not None:
                         family="Arial",
                         size=14,
                         color="darkgray"
-            ))) 
-         ,yaxis = dict(
+            )))
+            
+            ,yaxis = dict(
                 title= ""
                 ,autorange="reversed"
                 ,automargin=True
-        #         ,anchor="free"
                 ,ticklen=10
                 ,showgrid=True
                 ,showticklabels=True
                 ,tickfont=dict(
                     family='Old Standard TT, serif', size=16, color='gray'))
-         ,legend=dict(
+            
+            ,legend=dict(
                 orientation="h"
                 ,yanchor="bottom"
                 ,y=1.1
@@ -113,8 +109,23 @@ if uploaded_file is not None:
                     ,color="darkgray"))
         )
         
-        
-        
+        fig.update_traces( #marker_color='rgb(158,202,225)'
+                           marker_line_color='rgb(8,48,107)'
+                          , marker_line_width=1.5, opacity=0.95)
+                          
+        fig.update_layout(
+            title="<b>IE 3.0 Gantt Chart 2021</b>",
+            xaxis_title="",
+        #     margin_l=400,
+            yaxis_title="Initiatives",
+        #     legend_title="Dimension: ",
+            font=dict(
+                family="Arial",
+                size=24,
+                color="darkgray"
+            )
+        )
+ 
     fig
     
     go.FigureWidget(fig)
