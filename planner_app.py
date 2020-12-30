@@ -29,7 +29,7 @@ if uploaded_file is not None:
     df['Finish'] = df['Finish'].astype('datetime64')
     df['CR'] = df['CR'].astype(str)
     
-    orders = list(df['Process'])
+    orders = list(df['CR'])
     
     st.write(df)
     
@@ -45,7 +45,7 @@ if uploaded_file is not None:
                       , opacity=.7
     )
     
-    fig.update_yaxes(autorange="reversed")     
+#    fig.update_yaxes(autorange="reversed")     
     
     fig
     
