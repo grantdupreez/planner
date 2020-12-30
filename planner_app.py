@@ -39,9 +39,9 @@ if uploaded_file is not None:
                   range_y=None,
                   template='plotly_white',
                   height=1200,
-                  color='Dimension')
-#                  title="<b>Gantt Chart 2021</b>"
-#                  )
+#                  color='Dimension')
+                  title="<b>Gantt Chart 2021</b>"
+                  )
  
  
     fig
