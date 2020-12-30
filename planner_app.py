@@ -54,7 +54,7 @@ if uploaded_file is not None:
         bargap=0.5
         ,bargroupgap=0.1
         ,xaxis_range=[df.Start.min(), df.Finish.max()]
-        ,showgrid=True
+#        ,showgrid=True
         ,rangeslider_visible=True
         ,side ="top"
         ,tickmode = 'array'
@@ -88,7 +88,7 @@ if uploaded_file is not None:
             ,autorange="reversed"
             ,automargin=True
             ,ticklen=10
-            ,showgrid=True
+#            ,showgrid=True
             ,showticklabels=True
             ,tickfont=dict(
                 family='Old Standard TT, serif', size=16, color='gray'))
