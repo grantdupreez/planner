@@ -52,7 +52,7 @@ if uploaded_file is not None:
                   , range_y=None
                   , template='plotly_white'
                   , height=1200
-                     , color='Dimension'
+                     , color='Task'
                   , title ="<b>IE 3.0 Gantt Chart 2021</b>"
                  )
      
