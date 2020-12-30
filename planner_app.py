@@ -35,11 +35,11 @@ if uploaded_file is not None:
 #                         showgrid_x=True, showgrid_y=True)
  
     Fig = px.timeline(df, x_start="Start", x_end="Finish", Y="Task",
-        color_discrete_sequence=px.colors.qualitative.Prism, opacity=.7, , range_x=None
-                  , range_y=None
-                  , template='plotly_white'
-                  , height=1200, , color='Dimension'
-                  , title ="<b>IE 3.0 Gantt Chart 2021</b>"
+        color_discrete_sequence=px.colors.qualitative.Prism, opacity=.7, range_x=None,
+                  range_y=None,
+                  template='plotly_white',
+                  height=1200, , color='Dimension',
+                  title ="<b>Gantt Chart 2021</b>"
                   )
  
  
