@@ -41,8 +41,8 @@ if uploaded_file is not None:
                       , x_end="Finish"
                       , y="CR"
                       , hover_name="CR"
-                      , color='Color'
-                      , opacity=.7
+#                      , color='Color'
+#                      , opacity=.7
     )
     
     fig.update_yaxes(autorange="reversed")     
