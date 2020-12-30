@@ -40,7 +40,7 @@ if uploaded_file is not None:
                       , x_start="Start"
                       , x_end="Finish"
                       , y="CR"
-                      , hover_name="Task"
+                      , hover_name="CR"
                       , color='Status'
                       , opacity=.7
     )
