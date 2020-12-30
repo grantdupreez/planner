@@ -20,12 +20,11 @@ st.write("Use the template csv file")
 
 uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file, header=[0], encoding='latin1')
-#    df['Start'] = df['Start'].astype('datetime64')
-    df['Start'] = df["Start'].datetime64
-    #    df['Finish'] = df['Finish'].astype('datetime64')
+    df = pd.read_csv(uploaded_file, encoding='latin1')
+    df['Start'] = df['Start'].astype('datetime64')
+    df['Finish'] = df['Finish'].astype('datetime64')
     
-#    orders = list(df['Process'])
+    orders = list(df['Process'])
     
     st.write(df)
     
