@@ -24,7 +24,7 @@ if uploaded_file is not None:
 #    df['Start'] = df['Start'].astype('datetime64')
 #    df['Finish'] = df['Finish'].astype('datetime64')
     
-    orders = list(df['Process'])
+#    orders = list(df['Process'])
     
     st.write(df)
     
