@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-#import plotly.figure_factory as ff
 import plotly.express as px
 
 #set the plan logging
@@ -21,10 +20,10 @@ st.write("Use the template csv file")
 uploaded_file = st.sidebar.file_uploader("Choose a file",type=['CSV'])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, encoding='latin1')
-    df['Start'] = df['Start'].astype('datetime64')
-    df['Finish'] = df['Finish'].astype('datetime64')
+#    df['Start'] = df['Start'].astype('datetime64')
+#    df['Finish'] = df['Finish'].astype('datetime64')
     
-    orders = list(df['Process'])
+#    orders = list(df['Process'])
     
     st.write(df)
     
@@ -47,4 +46,4 @@ if uploaded_file is not None:
  
     fig
     
-    go.FigureWidget(fig)
+#    go.FigureWidget(fig)
