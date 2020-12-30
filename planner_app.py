@@ -38,7 +38,8 @@ if uploaded_file is not None:
         color_discrete_sequence=px.colors.qualitative.Prism, opacity=.7, range_x=None,
                   range_y=None,
                   template='plotly_white',
-                  height=1200, , color='Dimension',
+                  height=1200,
+                  color='Dimension',
                   title ="<b>Gantt Chart 2021</b>"
                   )
  
