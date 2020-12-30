@@ -48,8 +48,8 @@ if uploaded_file is not None:
                       , y="CR"
                       , hover_name="Task"
                       , color=colors
-                      , index_col='Status'
-                      , show_colorbar=True
+#                      , index_col='Status'
+#                      , show_colorbar=True
  #                     , range_x=None
  #                     , range_y=None
                       , opacity=.7
