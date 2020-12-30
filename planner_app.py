@@ -39,7 +39,7 @@ if uploaded_file is not None:
 #                         showgrid_x=True, showgrid_y=True)
  
     
-    fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", hover_name="Task",
+    fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", hover_name="Task"
                   , template='plotly_white'
     )
      
