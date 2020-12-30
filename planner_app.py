@@ -28,7 +28,7 @@ if uploaded_file is not None:
     df['Start'] = df['Start'].astype('datetime64')
     df['Finish'] = df['Finish'].astype('datetime64')
     
-    orders = list(df['CR'])
+#    orders = list(df['CR'])
     
     st.write(df)
     
@@ -41,9 +41,9 @@ if uploaded_file is not None:
     
     fig = px.timeline(df, x_start="Start", x_end="Finish", y="CR", hover_name="Task"
                   , template='plotly_white'
-                  , range_x=None
-                  , range_y=None
-                  , color_discrete_sequence=px.colors.qualitative.Prism
+#                  , range_x=None
+#                  , range_y=None
+#                  , color_discrete_sequence=px.colors.qualitative.Prism
                   , opacity=.7
                       
     )
