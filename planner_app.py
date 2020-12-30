@@ -40,18 +40,8 @@ if uploaded_file is not None:
  
     
     fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", hover_name="Task",
-                     color_discrete_sequence=px.colors.qualitative.Prism
-                  , opacity=.7
-                     , range_x=None
-                  , range_y=None
                   , template='plotly_white'
-                  , height=1200
-                     , color='Task'
-                  , title ="<b>IE 3.0 Gantt Chart 2021</b>"
     )
-    
-
- 
+     
     fig
     
-#    go.FigureWidget(fig)
