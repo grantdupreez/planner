@@ -82,7 +82,7 @@ if uploaded_file is not None:
                 family="Arial",
                 size=14,
                 color="darkgray"
-        )))
+        ))
         ,yaxis = dict(
             title= ""
             ,autorange="reversed"
