@@ -55,7 +55,66 @@ if uploaded_file is not None:
                      , color='Task'
                   , title ="<b>IE 3.0 Gantt Chart 2021</b>"
                  )
-     
+    
+     fig.update_layout(
+            bargap=0.5
+            ,bargroupgap=0.1
+            ,xaxis_range=[df.Start.min(), df.Finish.max()]
+            ,xaxis = dict(
+                showgrid=True
+                ,rangeslider_visible=True
+                ,side ="top"
+                ,tickmode = 'array'
+                ,dtick="M1"
+                ,tickformat="Q%q %Y \n"
+                ,ticklabelmode="period"
+                ,ticks="outside"
+                ,tickson="boundaries"
+                ,tickwidth=.1
+                ,layer='below traces'
+                ,ticklen=20
+                ,tickfont=dict(
+                    family='Old Standard TT, serif',size=24,color='gray')
+                ,rangeselector=dict(
+                    buttons=list([
+                        dict(count=1, label="1m", step="month", stepmode="backward"),
+                        dict(count=6, label="6m", step="month", stepmode="backward"),
+                        dict(count=1, label="YTD", step="year", stepmode="todate"),
+                        dict(count=1, label="1y", step="year", stepmode="backward"),
+                        dict(step="all")
+                    ])
+                    ,x=.37
+                    ,y=-.05
+                    ,font=dict(
+                        family="Arial",
+                        size=14,
+                        color="darkgray"
+            ))) 
+         ,yaxis = dict(
+                title= ""
+                ,autorange="reversed"
+                ,automargin=True
+        #         ,anchor="free"
+                ,ticklen=10
+                ,showgrid=True
+                ,showticklabels=True
+                ,tickfont=dict(
+                    family='Old Standard TT, serif', size=16, color='gray'))
+         ,legend=dict(
+                orientation="h"
+                ,yanchor="bottom"
+                ,y=1.1
+                ,title=""
+                ,xanchor="right"
+                ,x=1
+                ,font=dict(
+                    family="Arial"
+                    ,size=14
+                    ,color="darkgray"))
+        )
+        
+        
+        
     fig
     
     go.FigureWidget(fig)
