@@ -54,7 +54,6 @@ if uploaded_file is not None:
                   , height=1200
                      , color='Dimension'
                   , title ="<b>IE 3.0 Gantt Chart 2021</b>"
-                   , color=colors
                  )
      
     fig
