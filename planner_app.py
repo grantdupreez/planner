@@ -28,7 +28,7 @@ if uploaded_file is not None:
     df['Start'] = df['Start'].astype('datetime64')
     df['Finish'] = df['Finish'].astype('datetime64')
     
-#    orders = list(df['Task'])
+    orders = list(df['CR'])
     
     st.write(df)
     
@@ -39,8 +39,8 @@ if uploaded_file is not None:
 #                         showgrid_x=True, showgrid_y=True)
  
     
-    fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", hover_name="Task"
-                  , template='plotly_white'
+    fig = px.timeline(df, x_start="Start", x_end="Finish", y="CR", hover_name="Task"
+                  , template='plotly_white', showgrid_x=True, showgrid_y=True
     )
      
     fig
