@@ -38,13 +38,19 @@ if uploaded_file is not None:
 #    fig = ff.create_gantt(df, index_col='Status', show_colorbar=True,
 #                         showgrid_x=True, showgrid_y=True)
  
+    colors = {'Not Started': 'rgb(220, 0, 0)'
+              , 'Incomplete': (1, 0.9, 0.16)
+              , 'Complete': 'rgb(0, 255, 100)'}
     
-    fig = px.timeline(df, x_start="Start", x_end="Finish", y="CR", hover_name="Task"
-                  , template='plotly_white'
-#                  , range_x=None
-#                  , range_y=None
-#                  , color_discrete_sequence=px.colors.qualitative.Prism
-                  , opacity=.7
+    fig = px.timeline(df
+                      , x_start="Start"
+                      , x_end="Finish"
+                      , y="CR"
+                      , hover_name="Task"
+                      , color="Status"
+                      , range_x=None
+                      , range_y=None
+                      , opacity=.7
                       
     )
      
