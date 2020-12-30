@@ -38,7 +38,7 @@ if uploaded_file is not None:
 #    fig = ff.create_gantt(df, index_col='Status', show_colorbar=True,
 #                         showgrid_x=True, showgrid_y=True)
  
-    Fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task")
+    fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task")
  
     fig
     
