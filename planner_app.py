@@ -57,7 +57,7 @@ if uploaded_file is not None:
                    , color=colors
                  )
     
-            fig.update_layout(
+    fig.update_layout(
             bargap=0.5
             ,bargroupgap=0.1
             ,xaxis_range=[df.Start.min(), df.Finish.max()]
@@ -115,9 +115,11 @@ if uploaded_file is not None:
                     ,size=14
                     ,color="darkgray"))
         )
+        
         fig.update_traces( #marker_color='rgb(158,202,225)'
                            marker_line_color='rgb(8,48,107)'
                           , marker_line_width=1.5, opacity=0.95)
+                          
         fig.update_layout(
             title="<b>IE 3.0 Gantt Chart 2021</b>",
             xaxis_title="",
