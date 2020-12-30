@@ -45,7 +45,7 @@ if uploaded_file is not None:
                       , opacity=.7
     )
     
-#    fig.update_yaxes(autorange="reversed")     
+    fig.update_yaxes(autorange="reversed")     
     
     fig
     
