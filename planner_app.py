@@ -25,8 +25,8 @@ if uploaded_file is not None:
     
 #    df['Start'] = pd.to_datetime(df['Start'], format='%Y%m%%d')
 
-    df['Start'] = df['Start'].astype('datetime')
-    df['Finish'] = df['Finish'].astype('datetime')
+    df['Start'] = df['Start'].astype('datetime64')
+    df['Finish'] = df['Finish'].astype('datetime64')
     
     orders = list(df['Process'])
     
