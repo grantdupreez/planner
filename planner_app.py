@@ -40,7 +40,12 @@ if uploaded_file is not None:
  
     
     fig = px.timeline(df, x_start="Start", x_end="Finish", y="CR", hover_name="Task"
-                  , template='plotly_white', showgrid_x=True, showgrid_y=True
+                  , template='plotly_white'
+                  , range_x=None
+                  , range_y=None
+                  , color_discrete_sequence=px.colors.qualitative.Prism
+                  , opacity=.7
+                      
     )
      
     fig
