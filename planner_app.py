@@ -34,14 +34,7 @@ if uploaded_file is not None:
     
 #ACTION
 #    st.to_csv(s3_string+dt_string)
-    
-#    fig = ff.create_gantt(df, index_col='Status', show_colorbar=True,
-#                         showgrid_x=True, showgrid_y=True)
- 
-    colors = {'Not Started': 'rgb(220, 0, 0)'
-              , 'Incomplete': (1, 0.9, 0.16)
-              , 'Complete': 'rgb(0, 255, 100)'}
-    
+
     fig = px.timeline(df
                       , x_start="Start"
                       , x_end="Finish"
@@ -49,8 +42,9 @@ if uploaded_file is not None:
                       , hover_name="Task"
                       , color='Status'
                       , opacity=.7
-                      
     )
-     
+    
+    fig.update_yaxes(autorange="reversed")     
+    
     fig
     
