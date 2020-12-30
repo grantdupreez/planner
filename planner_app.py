@@ -47,11 +47,7 @@ if uploaded_file is not None:
                       , x_end="Finish"
                       , y="CR"
                       , hover_name="Task"
-                      , color=colors
-#                      , index_col='Status'
-#                      , show_colorbar=True
- #                     , range_x=None
- #                     , range_y=None
+                      , color='Status'
                       , opacity=.7
                       
     )
